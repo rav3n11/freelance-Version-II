@@ -2,12 +2,36 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Login from './Login';
+import Profile from './Profile'
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+
+import "./assets/vendor/nucleo/css/nucleo.css";
+import "./assets/vendor/font-awesome/css/font-awesome.min.css";
+import "./assets/css/argon-design-system-react.css?v1.1.0";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Switch>
+      <Route
+        path="/"
+        exact
+        render={props => <App {...props} />}
+      />
+      <Route
+        path="/login"
+        exact
+        render={props => <Login {...props} />}
+      />
+      <Route
+        path="/profile"
+        exact
+        render={props => <Profile {...props} />}
+      />
+      <Redirect to="/" />
+    </Switch>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

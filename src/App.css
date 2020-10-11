@@ -1,20 +1,80 @@
+
+
 .App {
   text-align: center;
+  overflow: hidden;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.App-logo-large {
+  height: 150vmin;
+  pointer-events: none;
+  z-index: 0;
+  margin-left: -1500px;
+  margin-top: -800px;
+}
+.App-logo-large-right {
+  height: 150vmin;
+  pointer-events: none;
+  z-index: 1;
+  margin-left: 600px;
+  margin-top: -600px;
+}
+.App-logo-large-right {
+  height: 150vmin;
+  pointer-events: none;
+  z-index: 1;
+  margin-left: -550px;
+  margin-top: -185px;
+}
+.AbsoBack{
+  position: absolute;
+  align-content: left;
+  height: 40vmin;
+  width: 40vmin;
+}
+.bg-greyish-transparent {
+  background-color: rgba(0,0,0,0.1);
+}
+.marge {
+  margin-top: 50px;
+}
+.nega-marge {
+  margin-top: -50px;
+}
+.marge-large {
+  margin-top: 150px;
+  margin-right: 50px;
+  opacity: 0.8;
+}
+.pic-opacity {
+  opacity: 0.8;
+}
+.pic-opacity:hover {
+  opacity: 1;
+}
+.marge-large:hover {
+  opacity: 1;
+}
+.match-height {
+  height: 150px;
+  margin: 20px;
+}
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .App-logo-large {
     animation: App-logo-spin infinite 20s linear;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo-large-right {
+    animation: Right-logo-spin infinite 20s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgba(200,200,200,0.2);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,5 +94,13 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes Right-logo-spin {
+  from {
+    transform: rotate(25deg);
+  }
+  to {
+    transform: rotate(-335deg);
   }
 }
