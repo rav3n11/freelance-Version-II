@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from './project.png';
-import logo_II from './project_II.png';
-import DemoNavbar from './Components/DemoNavbar';
-import LargeLogo from './Components/LargeLogo';
-import './App.css';
+import DemoNavbar from '../Components/DemoNavbar';
+import LargeLogo from '../Components/LargeLogo';
+import '../Css/App.css';
+import pixabay_270348 from"../assets/img/theme/pexels-pixabay-270348.jpg";
+import serpstat_572056 from "../assets/img/theme/pexels-serpstat-572056.jpg";
 
 import {
   Badge,
@@ -19,13 +19,13 @@ import {
 
 const items = [
   {
-    src: require("./assets/img/theme/img-1-1200x1000.jpg"),
+    src: require("../assets/img/theme/img-1-1200x1000.jpg"),
     altText: "",
     caption: "",
     header: ""
   },
   {
-    src: require("./assets/img/theme/img-2-1200x1000.jpg"),
+    src: require("../assets/img/theme/img-2-1200x1000.jpg"),
     altText: "",
     caption: "",
     header: ""
@@ -37,12 +37,7 @@ function App() {
     <div>
     <DemoNavbar />
     <div className="App">
-      <header className="App-header">
-        <div className="AbsoBack">
-          <img src={logo} className="App-logo-large" alt="logo" />
-          <img src={logo_II} className="App-logo-large-right" alt="logo" />
-        </div>     
-        <p >
+      <header className="App-header">     
           <Container className="py-lg-md d-flex marge">
                 <div className="col px-0">
                   <Row className = "bg-greyish-transparent">
@@ -62,7 +57,14 @@ function App() {
                     </Col>
                     <Col className="mb-lg-auto">
                         <div className="marge-large rounded shadow-lg overflow-hidden">
-                             <UncontrolledCarousel items={items}/>
+                               <div classname="rounded shadow-lg overflow-hidden">
+                               <UncontrolledCarousel items={items}/>
+                               </div>
+                               <div className="sepia-grey-tint">
+                                 <p>
+                                   
+                                 </p>
+                               </div>                       
                         </div>
                     </Col>
                   </Row>
@@ -78,7 +80,9 @@ function App() {
                        </div>
                 </div>
              </Container>
-          </p>
+        <div className="AbsoBack">
+          <LargeLogo />
+        </div>
       </header>
       <div>
         <section className="section section-lg pt-lg-0 mt--200">
@@ -182,7 +186,7 @@ function App() {
                   <Card className="bg-default shadow border-0">
                     <CardImg
                       alt="..."
-                      src={require("./assets/img/theme/pexels-serpstat-572056.jpg")}
+                      src={serpstat_572056}
                       top
                     />
                     <blockquote className="card-blockquote">
@@ -249,8 +253,7 @@ function App() {
                     </div>
                     <h3>Find talent easily</h3>
                     <p className="lead">
-                      Thanks to Covid, there are millions of talented engineers looking for work. Find the 
-                      talent your product needs without any hassle. 
+                      Thanks to Covid, there are millions of talented engineers looking for work. 
                     </p>
                     <p className="lead">
                       Never overpay. Have engineers bid for your project, and have your pick of talent within your budget.
@@ -271,7 +274,7 @@ function App() {
                   <Card className="bg-default shadow border-0">
                     <CardImg
                       alt="..."
-                      src={require("./assets/img/theme/pexels-pixabay-270348.jpg")}
+                      src={pixabay_270348}
                       top
                     />
                     <blockquote className="card-blockquote">

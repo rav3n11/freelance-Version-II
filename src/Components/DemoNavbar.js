@@ -1,35 +1,14 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from '../project.png';
-// JavaScript plugin that hides or shows a component based on your scroll
-import Headroom from "headroom.js";
-//import SearchField from 'react-search-field';
+import logo from '../assets/img/brand/project.png';
+
 // reactstrap components
 import {
-  Button,
   UncontrolledCollapse,
   DropdownMenu,
   DropdownItem,
   DropdownToggle,
   UncontrolledDropdown,
-  Media,
   NavbarBrand,
   Navbar,
   NavItem,
@@ -42,11 +21,6 @@ import {
 } from "reactstrap";
 
 class DemoNavbar extends React.Component {
-  // componentDidMount() {
-  //   let headroom = new Headroom(document.getElementById("navbar-main"));
-  //   // initialise
-  //   headroom.init();
-  // }
   state = {
     collapseClasses: "",
     collapseOpen: false
@@ -66,16 +40,7 @@ class DemoNavbar extends React.Component {
   onEnter = () => {
     console.log(`enter's working...`);
   };
-  render() {//navbar-dark bg-primary mt-4 navbar navbar-expand-lg
-
-    /*<NavItem >
-                    <div style = {{opacity: "0.5"}}>
-                    <SearchField 
-                      placeholder='Search item'
-                      onEnter={this.onEnter}
-                    />
-                    </div>
-                  </NavItem>*/
+  render() {
     return (
       <>
         <header className="header-global">
