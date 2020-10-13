@@ -18,14 +18,7 @@
 .App-logo-large-right {
   height: 150vmin;
   pointer-events: none;
-  z-index: 1;
-  margin-left: 600px;
-  margin-top: -600px;
-}
-.App-logo-large-right {
-  height: 150vmin;
-  pointer-events: none;
-  z-index: 1;
+  z-index: -1;
   margin-left: -550px;
   margin-top: -185px;
 }
@@ -34,6 +27,17 @@
   align-content: left;
   height: 40vmin;
   width: 40vmin;
+}
+.sepia-grey-tint-box {
+  position:absolute;
+}
+.sepia-grey-tint {
+  margin-top: 150px;
+  margin-right: 50px;
+  margin-left: 50px;
+  fill-color: #32325d;
+  opacity: 0.5;
+
 }
 .bg-greyish-transparent {
   background-color: rgba(0,0,0,0.1);
@@ -45,8 +49,9 @@
   margin-top: -50px;
 }
 .marge-large {
-  margin-top: 150px;
-  margin-right: 50px;
+  margin-top: 75px;
+  margin-right: 20px;
+  margin-left: 10px;
   opacity: 0.8;
 }
 .pic-opacity {

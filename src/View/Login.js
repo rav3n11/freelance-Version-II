@@ -1,6 +1,6 @@
 import React from 'react';
-import DemoNavbar from './Components/DemoNavbar.js';
-import './App.css';
+import DemoNavbar from '../Components/DemoNavbar.js';
+import '../Css/App.css';
 
 import {
   Button,
@@ -18,8 +18,8 @@ import {
   Col
 } from "reactstrap";
 
-import github from "./github.svg";
-import google from "./google.svg";
+import github from "../assets/img/icons/common/github.svg";
+import google from "../assets/img/icons/common/google.svg";
 
 function Login() {
   return (

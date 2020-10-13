@@ -1,26 +1,18 @@
 import React, { Component } from 'react';
 import classnames from "classnames";
-import logo from './project.png';
-import logo_II from './project_II.png';
-import DemoNavbar from './Components/DemoNavbar.js';
-import './App.css';
+import logo from '../assets/img/brand/project.png';
+import DemoNavbar from '../Components/DemoNavbar.js';
+import '../Css/App.css';
 
 import {
   Button,
   Card,
-  CardHeader,
   CardBody,
-  FormGroup,
-  Form,
   NavItem,
   NavLink,
   Nav,
   TabContent,
   TabPane,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
   Row,
   Col
@@ -56,7 +48,7 @@ render() {
                     <img
                       alt="..."
                       className="rounded-circle pic-opacity"
-                      src={require("./assets/img/theme/team-4-800x800.jpg")}
+                      src={require("../assets/img/theme/team-4-800x800.jpg")}
                     />
                   </a>
                 </div>
