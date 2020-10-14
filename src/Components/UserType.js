@@ -20,7 +20,7 @@ import {
   Col
 } from "reactstrap";
 
-class Register extends Component {
+class UserType extends Component {
   state = {};
   toggleModal = state => {
     this.setState({
@@ -31,15 +31,6 @@ class Register extends Component {
   return (
     <div>
     <DemoNavbar />
-          <Button
-              block
-              className="mb-3"
-              color="primary"
-              type="button"
-              onClick={() => this.toggleModal("defaultModal")}
-            >
-              Default
-            </Button>
            <Modal
               className="modal-dialog-centered no-overflow"
               isOpen={this.state.defaultModal}
@@ -82,4 +73,4 @@ class Register extends Component {
 }
 }
 
-export default Register;
+export default UserType;

@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import DemoNavbar from '../Components/DemoNavbar';
+import { Link } from "react-router-dom";
 import LargeLogo from '../Components/LargeLogo';
+import MediumLogo from '../Components/MediumLogo';
 import '../Css/App.css';
 import pixabay_270348 from"../assets/img/theme/pexels-pixabay-270348.jpg";
 import serpstat_572056 from "../assets/img/theme/pexels-serpstat-572056.jpg";
@@ -12,6 +14,7 @@ import {
   CardBody,
   CardImg,
   Container,
+  Modal,
   Row,
   Col,
   UncontrolledCarousel
@@ -32,7 +35,15 @@ const items = [
   }
 ];
 
-function App() {
+class App extends Component {
+  state = {};
+  toggleModal = state => {
+    this.setState({
+      [state]: !this.state[state]
+    });
+  };
+
+  render (){
   return (
     <div>
     <DemoNavbar />
@@ -57,27 +68,80 @@ function App() {
                     </Col>
                     <Col className="mb-lg-auto">
                         <div className="marge-large rounded shadow-lg overflow-hidden">
-                               <div classname="rounded shadow-lg overflow-hidden">
-                               <UncontrolledCarousel items={items}/>
+                               <div className="rounded shadow-lg overflow-hidden">
+                               <UncontrolledCarousel items={items} className="pic-opacity"/>
                                </div>
+                               <p className=" lead text-default">
+                                 Need some work done?  Looking for employment? 
+                               </p>
                                <div className="sepia-grey-tint">
-                                 <p>
-                                   
-                                 </p>
+                                 <div className="btn-wrapper">
+                                    <Button
+                                      className="btn-icon mb-3 mb-sm-0"
+                                      color="default"
+                                      size="lg"
+                                      onClick={() => this.toggleModal("defaultModal")}
+                                    >
+                                      <span className="btn-inner--text">Sign Up</span>
+                                    </Button>
+                                    <Modal
+                                        className="modal-dialog-centered no-overflow"
+                                        isOpen={this.state.defaultModal}
+                                        toggle={() => this.toggleModal("defaultModal")}
+                                      >
+                                        <div className="modal-header">
+                                          <p> Which type of user are you?</p>
+                                          <button
+                                            aria-label="Close"
+                                            className="close"
+                                            data-dismiss="modal"
+                                            type="button"
+                                            onClick={() => this.toggleModal("defaultModal")}
+                                          >
+                                            <span aria-hidden={true}>×</span>
+                                          </button>
+                                        </div>
+                                        <div className="modal-body justify-content-center marge">
+                                          <MediumLogo />
+                                          <div className="sepia-grey-tint-box" style={{marginTop:"-200px",marginLeft:"20px"}}>
+                                            <Card 
+                                            className="card-lift-up-hover shadow border-0 justify-content-center" 
+                                            style={{width:"200px",position:"absolute"}}
+                                            to="/Login"
+                                            tag={Link}
+                                            >
+                                            <CardBody className="py-5">
+                                              <div className="icon icon-shape icon-shape-default rounded-circle mb-4">
+                                                <i className="ni ni-briefcase-24" />
+                                              </div>
+                                              <h6 className="text-uppercase">
+                                                Freelancer
+                                              </h6>                                 
+                                            </CardBody>
+                                          </Card>
+                                          <Card className="card-lift-up-hover shadow border-0" style={{width:"200px",marginLeft:"220px"}}>
+                                            <CardBody className="py-5" size="sm">
+                                              <div className="icon icon-shape icon-shape-default rounded-circle mb-4">
+                                                <i className="ni ni-atom" />
+                                              </div>
+                                              <h6 className="text-uppercase">
+                                                Organization
+                                              </h6>
+                                            </CardBody>
+                                          </Card>
+                                          </div>
+                                     
+                                        </div>
+                                 
+                                      </Modal>
+                                   </div>
                                </div>                       
                         </div>
                     </Col>
                   </Row>
-                  <div className="btn-wrapper marge">
-                        <Button
-                          className="btn-icon mb-3 mb-sm-0"
-                          color="default"
-                          size="lg"
-                          href="/register-page"
-                        >
-                          <span className="btn-inner--text">Sign Up</span>
-                        </Button>
-                       </div>
+                  <Row>
+                   
+                  </Row>         
                 </div>
              </Container>
         <div className="AbsoBack">
@@ -86,7 +150,7 @@ function App() {
       </header>
       <div>
         <section className="section section-lg pt-lg-0 mt--200">
-            <Container style={{paddingTop: "100px",paddingBottom:"-200px"}}>
+            <Container style={{paddingTop: "50px",paddingBottom:"-200px",marginTop:"125px"}}>
               <Row className="justify-content-center">
                 <Col lg="12">
                   <Row className="row-grid">
@@ -110,11 +174,12 @@ function App() {
                           <Button
                             className="mt-4"
                             color="default"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            
+                            onClick={console.log("hi")}
                           >
                             Learn more
                           </Button>
+                          
                         </CardBody>
                       </Card>
                     </Col>
@@ -312,6 +377,7 @@ function App() {
     </div>
     </div>
   );
+}
 }
 
 export default App;
