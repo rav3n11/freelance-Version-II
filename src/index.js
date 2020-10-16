@@ -5,7 +5,7 @@ import App from './View/App';
 import Login from './View/Login';
 import Profile from './View/Profile'
 import Projects from './View/Projects'
-import Register from './View/Register'
+import RegisterUser from './View/RegisterUser'
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
@@ -37,9 +37,9 @@ ReactDOM.render(
         render={props => <Projects {...props} />}
       />
       <Route
-        path="/register"
+        path="/registerUser"
         exact
-        render={props => <Register {...props} />}
+        render={props => <RegisterUser {...props} />}
       />
       <Redirect to="/" />
     </Switch>

@@ -107,7 +107,7 @@ class App extends Component {
                                             <Card 
                                             className="card-lift-up-hover shadow border-0 justify-content-center" 
                                             style={{width:"200px",position:"absolute"}}
-                                            to="/Login"
+                                            to="/registerUser"
                                             tag={Link}
                                             >
                                             <CardBody className="py-5">

@@ -9,6 +9,7 @@
   pointer-events: none;
 }
 .App-logo-large {
+  animation-delay: 0.1s;
   height: 150vmin;
   pointer-events: none;
   z-index: 0;
@@ -16,6 +17,7 @@
   margin-top: -800px;
 }
 .App-logo-large-right {
+  animation-delay: 0.1s;
   height: 150vmin;
   pointer-events: none;
   z-index: -1;
@@ -23,6 +25,7 @@
   margin-top: -185px;
 }
 .App-logo-medium {
+  animation-delay: 0.1s;
   height: 25vmin;
   pointer-events: none;
   z-index: 0;
