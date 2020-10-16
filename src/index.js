@@ -5,6 +5,7 @@ import App from './View/App';
 import Login from './View/Login';
 import Profile from './View/Profile'
 import Projects from './View/Projects'
+import RegisterUser from './View/RegisterUser'
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
@@ -34,6 +35,11 @@ ReactDOM.render(
         path="/projects"
         exact
         render={props => <Projects {...props} />}
+      />
+      <Route
+        path="/registerUser"
+        exact
+        render={props => <RegisterUser {...props} />}
       />
       <Redirect to="/" />
     </Switch>

@@ -17066,5 +17066,14 @@ button.bg-default-success:hover {
   color: #2dce89 !important;
 }
 
+icon-shape-defauk:hover {
+  color: #11cdef !important; 
+}
+.card-lift-up-hover:hover {
+  transform: translateY(-20px);
+  transition: all 0.15s ease; }
+  @media (prefers-reduced-motion: reduce) {
+    .card-lift-up-hover:hover {
+      transition: none; } }
 
 /*# sourceMappingURL=argon-design-system-react.css.map */

@@ -107,9 +107,10 @@ render() {
                                   <NavItem>
                                     <NavLink
                                       aria-selected={this.state.iconTabs === 2}
-                                      className={classnames("icon-shape-defau","rounded-circle", {
+                                      className={classnames("rounded-circle", {
                                         active: this.state.iconTabs === 2
                                       })}
+                                      style={{backgroundColor:"#0b1526"}}
                                       onClick={e => this.toggleNavs(e, "iconTabs", 2)}
                                       href="#pablo"
                                       role="tab"
@@ -125,7 +126,7 @@ render() {
                             <CardBody>
                               <TabContent activeTab={"iconTabs" + this.state.iconTabs}>
                                 <TabPane tabId="iconTabs1">
-                                  <div className="text-center mt-5">
+                                  <div className="text-center mt-5 text-color-default">
                                           <h3>
                                             Jessica Jones{" "}
                                             <span className="font-weight-light">, 27</span>
@@ -145,12 +146,24 @@ render() {
                                         </div>
                                 </TabPane>
                                 <TabPane tabId="iconTabs2">
-                                  <p className="description">
-                                    Cosby sweater eu banh mi, qui irure terry richardson ex
-                                    squid. Aliquip placeat salvia cillum iphone. Seitan
-                                    aliquip quis cardigan american apparel, butcher voluptate
-                                    nisi qui.
-                                  </p>
+                                  <div className="text-center mt-5 text-color-default">
+                                          <h3>
+                                            Bill Cosby{" "}
+                                            <span className="font-weight-light">, 27</span>
+                                          </h3>
+                                          <div className="h6 font-weight-300">
+                                            <i className="ni location_pin mr-2" />
+                                            ironPen, prison
+                                          </div>
+                                          <div className="h6 mt-4">
+                                            <i className="ni business_briefcase-24 mr-2" />
+                                            expert rapist - kinda funny I guess
+                                          </div>
+                                          <div>
+                                            <i className="ni education_hat mr-2" />
+                                            a man who single-handedly 
+                                          </div>
+                                        </div>
                                 </TabPane>
                               </TabContent>
                             </CardBody>
